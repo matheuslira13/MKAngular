@@ -1,0 +1,29 @@
+.containerHistory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .titleHistoric {
+    font-size: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+  }
+  .containerGames {
+    border: 1px solid rgb(255, 174, 0);
+    padding: 10px;
+    .game {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      align-items: center;
+      .labelGame {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .imgGame {
+        width: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.containerHome {
+  width: 100%;
+  padding-top: 80px;
+  color: beige;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  .subContainerHome {
+    display: flex;
+    padding-top: 160px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    .titleMainMensagen {
+      margin-bottom: 10px;
+    }
+    .containerBtn {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+}
+.infoHome {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 20px;
+  display: flex;
+  background-color: inherit;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
