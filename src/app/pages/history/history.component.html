@@ -1,9 +1,33 @@
 <div class="containerHistory">
-  <P class="titleHistoric">HISTORIAS</P>
   <div class="containerGames">
-    <div class="game">
-      <label class="labelGame">Mortal Kombat Sub-Zero</label>
-      <img class="imgGame" src="../../../assets/img/1.jpg" />
+    <label class="titleHistoric">HISTORIAS</label>
+    <div class="gameDetails">
+      <div class="subGameDetails" *ngIf="out">
+        <div class="containerGameResume">
+          <h1>{{ gameName }}</h1>
+          <img class="gameCover" src="{{ gameCover }}" />
+          <p class="gameResumeText">
+            {{ gameText }}
+          </p>
+        </div>
+      </div>
+      <div class="subContainerGame">
+        <a *ngFor="let game of games" [routerLink]="['/gameDetails', game.id]">
+          <div
+            class="game"
+            [ngStyle]="{
+        background:
+          'url('+game.img+')',
+        
+          
+      }"
+            (click)="goToGameSelected(game)"
+            (mouseenter)="imgHover(game, true)"
+          >
+            <label class="labelGame">{{ game.name }}</label>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,8 @@
+<div *ngIf="game?.name" class="containerGameSelectHistory">
+  <h1>Historia {{ game?.name }}</h1>
+  <img src="{{ game.gameFront }}" />
+  <p
+    class="containerGameDatail"
+    [innerHTML]="spaceFunction(game.historyGame)"
+  ></p>
+</div>

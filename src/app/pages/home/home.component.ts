@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   cardHomeInfo = [
-    { title: 'Historias', img: '../assets/img/1.jpg' },
-    { title: 'Personagens', img: '../assets/img/1.jpg' },
-    { title: 'Gap_List', img: '../assets/img/1.jpg' },
-    { title: 'Noticias', img: '../assets/img/1.jpg' },
+    { title: 'Historias', img: '../assets/img/historias.jpg' },
+    { title: 'Personagens', img: '../assets/img/personagens.jpg' },
+    { title: 'Gap_List', img: '../assets/img/gapList.jpg' },
+    { title: 'Noticias', img: '../assets/img/noticias.jpg' },
   ];
 }

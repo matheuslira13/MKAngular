@@ -5,7 +5,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { GapListComponent } from './pages/gap-list/gap-list.component';
 import { LastNewsComponent } from './pages/last-news/last-news.component';
-import { TestComponent } from './test/test.component';
+import { GameDetailsComponent } from './pages/game-details/game-details.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +13,10 @@ export const routes: Routes = [
   { path: 'Personagens', component: CharactersComponent },
   { path: 'Gap_List', component: GapListComponent },
   { path: 'Noticias', component: LastNewsComponent },
-  { path: 'test', component: TestComponent },
+  {
+    path: 'gameDetails/:id',
+    component: GameDetailsComponent,
+  },
 ];
 
 @NgModule({
