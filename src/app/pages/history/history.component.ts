@@ -21,7 +21,6 @@ export class HistoryComponent {
   out = false;
 
   games?: Games[];
-  chama: any = (e: any) => console.log(e);
   imgOut: any = (e: any) => {
     this.out = e;
   };

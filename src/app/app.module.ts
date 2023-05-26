@@ -9,7 +9,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { routes } from './app-routing.module';
-import { CardCharactersComponent } from './components/card-characters/card-characters.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { GapListComponent } from './pages/gap-list/gap-list.component';
 import { LastNewsComponent } from './pages/last-news/last-news.component';
 import { CharactersComponent } from './pages/characters/characters.component';
@@ -20,6 +20,9 @@ import { GameDetailsComponent } from './pages/game-details/game-details.componen
 import { GamesHistoryService } from './pages/history/games.history.service';
 import { GamesDetailsService } from './pages/game-details/game.details.service';
 import { GameSelecteService } from './pages/history/gameSelected.service';
+import { CharacterService } from './pages/characters/characters.service';
+import { CardCharactersItemComponent } from './components/card-characters-item/card-characters-item.component';
+import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,14 @@ import { GameSelecteService } from './pages/history/gameSelected.service';
     HeaderComponent,
     HomeComponent,
     ButtonComponent,
-    CardCharactersComponent,
+    MainMenuComponent,
     GapListComponent,
     LastNewsComponent,
     CharactersComponent,
     HistoryComponent,
     GameDetailsComponent,
+    CardCharactersItemComponent,
+    CharacterDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,12 @@ import { GameSelecteService } from './pages/history/gameSelected.service';
     RouterModule.forRoot(routes),
     HttpClientModule,
   ],
-  providers: [GamesHistoryService, GameSelecteService, GamesDetailsService],
+  providers: [
+    GamesHistoryService,
+    GameSelecteService,
+    GamesDetailsService,
+    CharacterService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

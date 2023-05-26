@@ -1,0 +1,8 @@
+<div class="containerCharacterSelected" *ngIf="characterSelected?.id">
+  <label class="text">{{ characterSelected.name }}</label>
+  <img src="{{ characterSelected.img }}" />
+  <div
+    class="resumeInformation"
+    [innerHTML]="spaceFunction(characterSelected.resumeInformation)"
+  ></div>
+</div>

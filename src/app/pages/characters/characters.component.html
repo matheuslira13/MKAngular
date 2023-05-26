@@ -1,1 +1,11 @@
-<p>characters works!</p>
+<div class="containerCharacters">
+  <h1>Personagens de toda franquia</h1>
+  <div class="subContainerCharacters">
+    <app-card-characters-item
+      *ngFor="let character of characters"
+      name="{{ character.name }}"
+      img="{{ character.img }}"
+      (click)="goToCharacterDetails(character.id)"
+    ></app-card-characters-item>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.characterContainer {
+  border: 1px solid rgb(211, 163, 6);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  background-size: cover;
+  margin: 5px;
+  transition: all 0.3s;
+  .nameCharacter {
+    text-align: center;
+  }
+}
+
+.characterContainer:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  cursor: pointer;
+}

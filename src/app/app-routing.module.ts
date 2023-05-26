@@ -6,6 +6,7 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { GapListComponent } from './pages/gap-list/gap-list.component';
 import { LastNewsComponent } from './pages/last-news/last-news.component';
 import { GameDetailsComponent } from './pages/game-details/game-details.component';
+import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'gameDetails/:id',
     component: GameDetailsComponent,
+  },
+  {
+    path: 'characterDetails/:id',
+    component: CharacterDetailsComponent,
   },
 ];
 

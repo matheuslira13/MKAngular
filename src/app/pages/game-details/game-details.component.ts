@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { spaceFunction } from '../../../assets/utils/spaceBreak';
 
 import { MEAT_API } from '../../../app.api';
 
@@ -14,23 +15,18 @@ import { MEAT_API } from '../../../app.api';
   styleUrls: ['./game-details.component.scss'],
 })
 export class GameDetailsComponent {
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
-    console.log('deveria ser o 2', this.game);
-  }
+  constructor(private http: HttpClient, private route: ActivatedRoute) {}
   id?: string;
   game?: any;
-  teste?: any = '';
 
   getGameDetail(): Observable<Games[]> {
     return this.http.get<Games[]>(`${MEAT_API}games/${this.id}`);
   }
-  spaceFunction = (content: any) => content.replace(/\n/g, '</br></br>');
+  spaceFunction = (e: any) => spaceFunction(e);
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.id = params['id'];
     });
-    this.getGameDetail().subscribe(
-      (item) => ((this.game = item), console.log('deveria ser o 1', item))
-    );
+    this.getGameDetail().subscribe((item) => (this.game = item));
   }
 }

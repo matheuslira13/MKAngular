@@ -1,0 +1,14 @@
+.containerCharacters {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  .subContainerCharacters {
+    margin-bottom: 10vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
